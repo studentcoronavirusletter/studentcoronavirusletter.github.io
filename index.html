@@ -45,7 +45,7 @@
          <div class="modal-content">
             <span class="close">&times;</span>
             <p>
-            <div id="addthis" class="addthis_inline_share_toolbox"></div>
+            <div class="addthis_inline_share_toolbox"></div>
             </p>
          </div>
       </div>
@@ -89,7 +89,7 @@
          		media: "Take the survey, read the letter, sign it."
          }
          function blockdetect() {
-            if (document.getElementById('addthis').innerHTML == "") {document.getElementById('addthis').innerHTML = "Your adblocker is blocking the sharing function, sorry.";}
+            if (typeof addthis === undefined) {document.getElementByClassName('addthis_inline_share_toolbox').innerHTML = "Your adblocker is blocking the sharing function, sorry.";}
          }
       </script>
    </body>
